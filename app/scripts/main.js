@@ -1,6 +1,6 @@
 'use strict'
 
-const body = document.querySelector('body');
+
 const faqList = document.querySelectorAll('[data-switch]');
 const faqBtnQuestion = document.querySelectorAll('.q-title-container');
 const show = document.querySelector('.show');
@@ -8,12 +8,16 @@ const show = document.querySelector('.show');
 
 
 const init = () => {
-    
+    const body = document.querySelector('body');
+    body.style.overflow = "hidden";
+
     const loadingPage = document.querySelector('[data-loading]')
 
 
     window.onload = () => {
-        loadingPage.dataset.loading = "close";
+        loadingPage.dataset.loading = 'close';
+        body.style.overflow = "auto";
+        faqClick();
         welcomeTextAnim();
         window.onscroll = () => {
             windowPosAnim();
@@ -61,7 +65,7 @@ const showElement = (pos) => {
 
 }
 
-init();
+
 
 
 
@@ -71,32 +75,36 @@ init();
 
 
 // FAQ QUESTIONS ANIMATION
-for(let i = 0; i < faqBtnQuestion.length; i++) {
-    faqBtnQuestion[i].addEventListener('click', (e) => {
-        for (let f = 0; f < faqList.length; f++) {
-            
+const faqClick = () => {
+    for(let i = 0; i < faqBtnQuestion.length; i++) {
+        faqBtnQuestion[i].addEventListener('click', (e) => {
+            for (let f = 0; f < faqList.length; f++) {
+                
+    
+                setTimeout(() => {
+                    if (i === f) {
+                        
+                        windowSize(f);                    
+                    } else {
+                        faqList[f].dataset.switch = 'close'
+                        faqBtnQuestion[i].style.color = 'white';
+                        
+                    }
+                },100)
+            }
+        })
+    }
 
-            setTimeout(() => {
-                if (i === f) {
-                    
-                    windowSize(f);                    
-                } else {
-                    faqList[f].dataset.switch = "close"
-                    faqBtnQuestion[i].style.color = "white";
-                    
-                }
-            },100)
-        }
-    })
 }
+
 
 function windowSize(f) {
     
-    if (faqList[f].dataset.switch === "close") {
-        faqList[f].dataset.switch = "open";
-        show.innerHTML = "";
+    if (faqList[f].dataset.switch === 'close') {
+        faqList[f].dataset.switch = 'open';
+        show.innerHTML = '';
     } else {
-        faqList[f].dataset.switch = "close";
+        faqList[f].dataset.switch = 'close';
     }
 
 
@@ -106,6 +114,8 @@ function windowSize(f) {
 }
 
 
+
+init();
 
 
 
