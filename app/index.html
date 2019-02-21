@@ -9,11 +9,13 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"/>
     <!-- Place favicon.ico in the root directory -->
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/animation.css">
+    
     <!-- endbuild -->
     
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -22,7 +24,7 @@
     
     
   </head>
-  <body>
+  <body class="index">
     <!--[if IE]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -42,14 +44,7 @@
 
       <nav class="navbar-wrap">
         <div class="navbar-content">
-          <img src="images/logo/Gusinho borda preta2.png" alt="">
-          
-          <ul class="navbar-links">
-            <li>Produtos</li>
-            <li>Serviços</li>
-            <li>Cuidados</li>
-            <li>Contato</li>
-          </ul>
+            <a role="button" href="index.html"><img src="images/logo/Gusinho borda preta2.png" alt=""></a>
         </div>
       </nav>
 
@@ -60,15 +55,67 @@
         <div class="black-bg">
           <div class="welcome-text">
             <h1 class="welcome-title" data-move="welcome-text">Bem-vindo</h1>
-            <p data-move="welcome-text">A mais de tantos anos no mercado</p>
-            <p data-move="welcome-text">Trabalhando sempre com as melhores marcas</p>
-            <p data-move="welcome-text">Exclusividade em cores de carros que não saem de fábrica</p>
-            <button data-move="welcome-text" class="welcome-btn">Saiba mais sobre nós</button>
+            <p data-move="welcome-text">Gusinho Adesivos oferece segurança e conforto,</p>
+            <p data-move="welcome-text">através de um atendimento exclusivo e
+              personalizado no local de escolha do cliente,</p>
+            <p data-move="welcome-text">garantindo um serviço de qualidade e com
+              eficiência.</p>
+            <p data-move="welcome-text">
+                Desenvolvemos o trabalho com o melhor material disponível no mercado,
+            </p>
+            <button data-move="welcome-text" class="welcome-btn">
+              <a href="about.html">Saiba mais sobre nós</a></button>
           </div>
 
         </div>
       </section>
 
+      
+
+      <section class="photo-galery-section">
+        <div class="photo-inner">
+          <div class="faq-title">
+            <h1 class="title-1" data-move="right">Nossos</h1>
+            <h1 class="title-2" data-move="left">Trabalhos</h1>
+          </div>
+          <div class="responsive">
+              <div class="slick-img-box">
+                <img src="images/carousel/carousel- (1).jpeg" alt="">
+              </div>
+              <div class="slick-img-box">
+                <img src="images/carousel/carousel- (2).jpeg" alt="">
+              </div>
+              <div class="slick-img-box">
+                <img src="images/carousel/carousel- (3).jpeg" alt="">
+              </div>
+              <div class="slick-img-box">
+                  <img src="images/carousel/carousel- (4).jpeg" alt="">
+                </div>
+                <div class="slick-img-box">
+                  <img src="images/carousel/carousel- (5).jpeg" alt="">
+                </div>
+                <div class="slick-img-box">
+                  <img src="images/carousel/carousel- (6).jpeg" alt="">
+                </div>
+            </div>
+        </div>
+      </section>
+
+
+      <section class="wrap-text-section" data-move="up">
+        <div class="wrap-text-inner">
+          <div class="wrap-text">
+            <p>Envelopamento é o processo
+                de aplicação de película adesiva
+                sobre uma superfície, seja um
+                veículo, arquitetura ou
+                acessórios.</p>
+
+          </div>
+        </div>
+      </section>
+
+     
 
 
       <section class="jobs-container">
@@ -88,19 +135,7 @@
                 </div>                
               </div>
             </li>
-            <li class="job">
-                <div class="blue-opacity">
-                  <div class="job-content">
-                    <h1 data-move="up">Produtos</h1>
-                    <p data-move="up">Os produtos da alttak são de ótima qualidade e são oferecidas em várias cores</p>
-                    <button class="jobs-btn" data-move="up">
-                        <a href="">
-                            Saiba Mais
-                        </a>
-                      </button>
-                  </div>                  
-                </div>              
-            </li>            
+                       
           </ul>
         </div>
       </section>
@@ -121,15 +156,15 @@
               </button>
               <ul class="faq-list" data-switch="close">
                 <li>
-                  <p><strong>Quanto tempo demora para aplicar?</strong></p>
+                  <p class="question"><strong>Quanto tempo demora para aplicar?</strong></p>
                   <p>Para aplicar a duração varia de acordo com o seu projeto...</p>
                 </li>
                 <li>
-                  <p>Quanto tempo dura o envelopamento?</p>
+                  <p class="question">Quanto tempo dura o envelopamento?</p>
                   <p>O produto dura por aproximadamente 7 anos...</p>
                 </li>
                 <li>
-                  <p>Quanto tempo dura o envelopamento?</p>
+                  <p class="question">Quanto custa para envelopar meu carro?</p>
                   <p>O produto dura por aproximadamente 7 anos...</p>
                 </li>
               </ul>
@@ -141,9 +176,19 @@
                 <h3 class="faq-q-title" data-move="up">Cuidados</h3>
               </button>
               <ul class="faq-list" data-switch="close">
-                <li>duvida</li>
-                <li>duvida</li>
-                <li>duvida</li>
+                <li>
+                    <p class="question"><strong>Quais cuidados devo tomar com meu carro envelopado?</strong></p>
+                    <p>Não existe nenhum cuidado específico com veículos
+                        envelopados. Porém recomenda-se a limpeza com
+                        qualquer tipo de sabão ou shampoo neutro e água,
+                        evitando o uso de lava-jatos automáticos (escovões) e ou
+                        Lavadoras tipo VAP, ou de produtos químicos e cera, que
+                        podem danificar o adesivo ou provocar o seu
+                        descolamento.
+                        Para veículos branco fosco, que podem apresentar
+                        sujeira maior, recomenda-se o uso de sabão de coco
+                        líquido.</p>
+                </li>
               </ul>
             </div>
             <div class="q">
@@ -152,9 +197,28 @@
                 <h3 class="faq-q-title" data-move="up">Geral</h3>
               </button>
               <ul class="faq-list" data-switch="close">
-                <li>duvida</li>
-                <li>duvida</li>
-                <li>duvida</li>
+                <li>
+                    <p class="question"><strong>Qualquer carro pode ser envelopado?</strong></p>
+                    <p>Qualquer carro pode ser envelopado: novos e antigos,
+                        não trazendo nenhum dano a pintura original do carro,
+                        independente do tempo que permaneça aplicado, desde
+                        que sendo realizada com material de qualidade e por
+                        profissional capacitado.</p>
+                </li>
+                <li>
+                    <p class="question"><strong>Posso envelopar com uma cor diferente da cor original do meu carro?</strong></p>
+                    <p>A cor predominante no veículo
+                        precisa ser a mesma do documento. Caso a escolha da
+                        cor película seja diferente, é necessário realizar alteração
+                        da documentação junto ao DETRAN.</p>
+                </li>
+                <li>
+                    <p class="question"><strong>Por que devo envelopar o meu carro?</strong></p>
+                    <p>O envelopamento tem como função principal proteger a pintura do carro,
+                        mas atualmente está sendo bastante utilizada para
+                        personalizar o veículo, deixando-o com um visual
+                        diferenciado em pouco tempo e com custo acessível.</p>
+                </li>
               </ul>
             </div>
           </div>
@@ -171,12 +235,16 @@
           </div>
           <div class="contact-text-container">
             <p>
-              Entre em contato pelo whatsapp ou pelas redes sociais e fale sobre os detalhes do seu projeto, retornaremos assim que possível.
+                Para maior comodidade, trabalhamos com horário agendado, no local a ser combinado,
+                podendo ser também em nossa sede em campinas.
+                Para a execução do trabalho a escolha do local é também flexível, sendo
+                definida nesse primeiro contato ou através de meios de comunicação como email, contato
+                telefônico ou facebook.
             </p>
           </div>
           <ul class="social-logos-container">
             <li class="social-logos">
-                <a href="https://wa.me/+55199991662578">
+                <a href="https://wa.me/+5519991662578">
                   <i class="fab fa-whatsapp"></i>
                 </a> 
             </li>
@@ -238,6 +306,7 @@
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   </body>
 </html>
 
