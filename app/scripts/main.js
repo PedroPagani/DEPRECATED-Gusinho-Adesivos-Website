@@ -22,16 +22,16 @@ const init = () => {
         let bodyClass = body.getAttribute('class');
         
         switch (bodyClass) {
-            case "index":
+            case 'index':
                 sliderInit();
                 faqClick();
             break;
 
-            case "services":
+            case 'services':
                 getElementsOffSet();
             break;
 
-            case "about":
+            case 'about':
             break;
         }
 
@@ -128,7 +128,6 @@ function windowSize(f, faqList, show) {
     }
     
     if (window.innerWidth > 1024 || body.clientWidth + 17 > 1024) {
-        console.log("verdade ou nem");
         show.appendChild(faqList[f]);
     }
     
@@ -183,7 +182,6 @@ const sliderInit = () => {
     
      for(let i = 0; i < listBtn.length; i++) {
         offSetList.push(elementsToGo[i].offsetTop);
-        console.log(listBtn[i]);
          listBtn[i].addEventListener('click',() => {
             windowMoveTo(i, offSetList);
             
